@@ -14,9 +14,10 @@ Via `docker run`:
 
 ```bash
 $ docker run --rm -it \
-    --device=/dev/kvm:/dev/kvm --device=/dev/net/tun:/dev/net/tun \
-    --cap-add NET_ADMIN -v $VM_IMAGE_FILE:/image \
-    jkz0/qemu:latest
+    --device=/dev/kvm:/dev/kvm \
+    --device=/dev/net/tun:/dev/net/tun \
+    --cap-add NET_ADMIN \
+    -v $VM_IMAGE_FILE:/image jkz0/qemu:latest
 ```
 
 Via `docker-compose.yml`:
