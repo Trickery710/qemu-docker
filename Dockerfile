@@ -1,4 +1,4 @@
-FROM debian:bullseye-20230109-slim
+FROM debian:11.6-slim
 
 RUN apt-get update && apt-get -y upgrade && \
     apt-get --no-install-recommends -y install \
